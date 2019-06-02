@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #mydiv {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /* 動畫名稱size */
+            animation-name: size;
+            /* 動畫長度秒數*/
+            animation-duration: 3s;
+            /* 動畫延遲開始時間*/
+            animation-delay: 1s;
+            /*動畫播放次數*/
+            animation-iteration-count: infinite;
+            /*動畫播放的方向
+            normal   一般 (以size舉例，由小變大)
+            reverse  方向 (以size舉例，由大變小)
+            alternate 播過去在播回來 
+            alternate-reverse 播回來再播過去(以size舉例，會先100%開始播)
+            */
+            animation-direction: alternate;
+
+            /*
+            播放速度
+            linear 線性
+            ease-in 慢慢來
+            ease-out 慢慢結束
+            ease 開始結束都變慢
+            */
+            animation-timing-function: linear;
+        }
+
+        @keyframes size {
+            0% {
+                width: 100px;
+                height: 100px;
+            }
+
+            50% {
+                background-color: blue;
+            }
+
+            100% {
+                width: 300px;
+                height: 300px;
+            }
+        }
+
+        #mydiv2 {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            animation-name: move;
+            /* 動畫長度秒數*/
+            animation-duration: 5s;
+            /* 動畫延遲開始時間*/
+            animation-delay: 1s;
+            /*動畫播放次數*/
+            animation-iteration-count: infinite;
+
+        }
+        @keyframes move
+        { 
+            0%
+            {
+                margin: 0px;
+            }
+            33%
+            {
+                margin-left: 300px;
+                margin-top: 0px;
+
+            }
+            66%
+            {
+                margin-left: 300px;
+                margin-top: 300px;
+            }
+            100%
+            {
+                margin: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mydiv2">
+
+    </div>
+    <div id="mydiv_no">
+
+    </div>
+
+</body>
+
+</html>
